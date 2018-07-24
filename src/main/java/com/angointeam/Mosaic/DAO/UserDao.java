@@ -1,6 +1,6 @@
 package com.angointeam.Mosaic.DAO;
 
-import com.angointeam.Mosaic.VO.UserVO;
+import com.angointeam.Mosaic.SignIn.VO.UserVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;

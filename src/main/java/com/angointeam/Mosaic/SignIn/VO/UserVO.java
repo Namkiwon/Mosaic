@@ -1,4 +1,8 @@
-package com.angointeam.Mosaic.VO;
+package com.angointeam.Mosaic.SignIn.VO;
+
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 import java.util.Date;
 
@@ -28,7 +32,16 @@ public class UserVO {
         return nickname;
     }
 
+
     public void setNickname(String nickname) {
         this.nickname = nickname;
     }
+
+    public UserVO(){}
+        public UserVO(String email,String uuid,String nickname){
+            this.email = email;
+            this.uuid = uuid;
+            this.nickname = nickname;
+        }
+
 }

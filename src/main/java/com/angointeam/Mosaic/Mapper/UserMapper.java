@@ -1,7 +1,6 @@
 package com.angointeam.Mosaic.Mapper;
 
-import com.angointeam.Mosaic.VO.UserVO;
-import org.apache.ibatis.annotations.Mapper;
+import com.angointeam.Mosaic.SignIn.VO.UserVO;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
 
@@ -14,7 +13,11 @@ public interface UserMapper {
      List<UserVO> getUsers() throws Exception;
 
      @Select("INSERT INTO User(email,uuid,nickname) VALUES(#{email},#{uuid},#{nickname})")
-     void insert(UserVO user) throws Exception;
+     UserVO insert(UserVO user) throws Exception;
+
+     @Select("SELECT * FROM User WHERE email = #{email}")
+     UserVO findByEmail(String email) throws Exception;
+
 
 
 }
